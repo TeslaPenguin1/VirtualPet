@@ -1,27 +1,24 @@
-PShape pent;
 PFont Registry;
 
 void setup() {
   size(1000,1000);
   background(0);
-  pent = createShape();
-  pent.beginShape();
-  pent.stroke(200);
-  pent.fill(230,230,230);
-  pent.vertex(475,380);
-  pent.vertex(525,380);
-  pent.vertex(530,430);
-  pent.vertex(500,440);
-  pent.vertex(470,430);
-  pent.endShape(CLOSE);
   Registry = createFont("Starfleet Bold Extended BT.ttf", 40);
 }
 void draw() {
   //Secondary Hull
-  fill(210,210,210);
+  stroke(170);
+  fill(180,180,180);
+  ellipse(500,625,50,50);
+  fill(200,200,200);
+  quad(460,450,540,450,525,625,475,625);
+  noStroke();
   ellipse(500,440,80,120);
-  quad(460,450,540,450,520,650,480,650);
-  ellipse(500,650,40,40);
+  ellipse(500,620,50,30);
+  fill(205,205,205);
+  quad(495,490,505,490,505,620,495,620);
+  fill(210,210,210);
+  triangle(500,500,520,420,480,420);
   
   //Saucer Section
   stroke(170);
@@ -34,7 +31,12 @@ void draw() {
   fill(230,230,230);
   arc(500,250,70,70,PI,PI*2);
   arc(500,250,70,120,0,PI);
-  shape(pent);
+  stroke(200);
+  quad(475,380,525,380,530,430,470,430);
+  triangle(530,430,470,430,500,440);
+  stroke(230);
+  line(530,430,470,430);
+  noStroke();
   ellipse(500,380,50,50);
   fill(240,240,240);
   ellipse(500,250,35,35);
