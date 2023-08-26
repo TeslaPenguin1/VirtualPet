@@ -21,8 +21,8 @@ void draw() {
   fill(210,210,210);
   triangle(500,500,520,420,480,420);
   fill(#F26C6C);
-  ellipse(505,630,4,4);
-  ellipse(495,630,4,4);
+  ellipse(505,630,5,5);
+  ellipse(495,630,5,5);
   
   //Left Nacelle
   stroke(170);
@@ -41,22 +41,25 @@ void draw() {
   ellipse(362.5,825,5,10);
   quad(348,470,377,470,375,530,350,530);
   ellipse(363,470,27,70);
+  fill(235);
+  quad(357,515,368,515,368,700,357,700);
+  ellipse(362.5,700,10,30);
   stroke(170);
   strokeWeight(2);
   line(357,515,350,530);
   line(368,515,374.5,530);
-  
   noStroke();
   fill(90);
   quad(357,510,361,510,361,440,357,440);
   quad(368,510,364,510,364,440,368,440);
   arc(361,445,13,18,PI/2,3*PI/2);
   arc(364,444,13,18,-PI/2,PI/2);
-
   fill(#B2FCFF);
   ellipse(362.5,510,10,10);
   fill(#D1FDFF);
   ellipse(362.5,510,7,7);
+  fill(#F26C6C);
+  ellipse(362.5,820,4,4);
 
   
   //Saucer Section
@@ -95,7 +98,7 @@ void draw() {
   stroke(200);
   quad(475,380,525,380,530,430,470,430);
   triangle(530,430,470,430,500,440);
-  stroke(230);
+  stroke(235);
   line(530,430,470,430);
   noStroke();
   ellipse(500,380,50,50);
@@ -109,6 +112,8 @@ void draw() {
   noStroke();
   fill(#D1FDFF);
   ellipse(500,380,15,15);
-  fill(0);
-  text("NCC-1701-A", 400, 200);
+  fill(#F26C6C);
+  ellipse(330,250,4,4);
+  fill(#6DF07B);
+  ellipse(670,250,4,4);
 }
