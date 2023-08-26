@@ -1,9 +1,6 @@
-PFont Registry;
-
 void setup() {
   size(1000,1000);
   background(0);
-  Registry = loadFont("StarfleetBT-BoldExtended-50.vlw");
 }
 void draw() {
   //Secondary Hull
@@ -71,14 +68,26 @@ void draw() {
   fill(225,225,225);
   ellipse(500,250,225,225);
   noFill();
-  stroke(200);
-  ellipse(500,250,150,150);
+  stroke(195);
   ellipse(500,250,200,200);
   ellipse(500,250,250,250);
   ellipse(500,250,300,300);
   ellipse(500,250,345,345);
   line(500,175,500,77.5);
   line(500,325,500,423.5);
+  line(575,250,672.5,250);
+  line(425,250,327.5,250);
+  float diag = 87.5*sqrt(3);
+  line(587.5,250+diag,500,250);
+  line(587.5,250-diag,500,250);
+  line(412.5,250+diag,500,250);
+  line(412.5,250-diag,500,250);
+  line(500+diag,337.5,500,250);
+  line(500-diag,337.5,500,250);
+  line(500+diag,162.5,500,250);
+  line(500-diag,162.5,500,250);
+  fill(225,225,225);
+  ellipse(500,250,150,150);
   noStroke();
   fill(235,235,235);
   arc(500,250,70,70,PI,PI*2);
@@ -101,6 +110,5 @@ void draw() {
   fill(#D1FDFF);
   ellipse(500,380,15,15);
   fill(0);
-  textFont(Registry, 30);
   text("NCC-1701-A", 400, 200);
 }
