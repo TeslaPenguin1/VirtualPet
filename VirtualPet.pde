@@ -135,11 +135,11 @@ void draw() {
   arc(500,250,70,70,PI,PI*2);
   arc(500,250,70,120,0,PI);
   stroke(200);
-  strokeWeight(1);
   quad(475,380,525,380,530,430,470,430);
   triangle(530,430,470,430,500,440);
   stroke(235);
   line(530,430,470,430);
+  strokeWeight(1);
   ellipse(500,380,50,50);
   stroke(200);
   fill(225);
