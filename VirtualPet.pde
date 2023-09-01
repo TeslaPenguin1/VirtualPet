@@ -1,8 +1,236 @@
+float diag = 87.5*sqrt(3);
+color r1;
+color r2;
+color b1;
+color b2;
+color a1;
+color a2;
+float prog1;
+float prog2;
+float prog3;
+float prog4;
+float prog5;
+float prog6;
+float prog7;
+float prog8;
+float prog9;
+float prog0;
+int step;
+float randX1;
+float randVel1;
+float randDelay1;
+float randX2;
+float randVel2;
+float randDelay2;
+float randX3;
+float randVel3;
+float randDelay3;
+float randX4;
+float randVel4;
+float randDelay4;
+float randX5;
+float randVel5;
+float randDelay5;
+float randX6;
+float randVel6;
+float randDelay6;
+float randX7;
+float randVel7;
+float randDelay7;
+float randX8;
+float randVel8;
+float randDelay8;
+float randX9;
+float randVel9;
+float randDelay9;
+float randX0;
+float randVel0;
+float randDelay0;
+float randStarSize1;
+float randStarSize2;
+float randStarSize3;
+float randStarSize4;
+float randStarSize5;
+float randStarSize6;
+float randStarSize7;
+float randStarSize8;
+float randStarSize9;
+float randStarSize0;
+
 void setup() {
   size(1000,1000);
   background(0);
+  r1 = color(#FF8989);
+  r2 = color(#FF8989,0);
+  b1 = color(#86E8FF);
+  b2 = color(#86E8FF,0);
+  a1 = color(#A7F7FF);
+  a2 = color(#A7F7FF,0);
+  prog1 = random(-300,900);
+  prog2 = random(-300,900);
+  prog3 = random(-300,900);
+  prog4 = random(-300,900);
+  prog5 = random(-300,900);
+  prog6 = random(-300,900);
+  prog7 = random(-300,900);
+  prog8 = random(-300,900);
+  prog9 = random(-300,900);
+  prog0 = random(-300,900);
+  step = 0;
+  randX1 = random(1000);
+  randVel1 = random(0.6,1.4);
+  randDelay1 = random(200);
+  randX2 = random(1000);
+  randVel2 = random(0.6,1.4);
+  randDelay2 = random(200);
+  randX3 = random(1000);
+  randVel3 = random(0.6,1.4);
+  randDelay3 = random(200);
+  randX4 = random(1000);
+  randVel4 = random(0.6,1.4);
+  randDelay4 = random(200);
+  randX5 = random(1000);
+  randVel5 = random(0.6,1.4);
+  randDelay5 = random(200);
+  randX6 = random(1000);
+  randVel6 = random(0.6,1.4);
+  randDelay6 = random(200);
+  randX7 = random(1000);
+  randVel7 = random(0.6,1.4);
+  randDelay7 = random(200);
+  randX8 = random(1000);
+  randVel8 = random(0.6,1.4);
+  randDelay8 = random(200);
+  randX9 = random(1000);
+  randVel9 = random(0.6,1.4);
+  randDelay9 = random(200);
+  randX0 = random(1000);
+  randVel0 = random(0.6,1.4);
+  randDelay0 = random(200);
+  randStarSize1 = random(2,4);
+  randStarSize2 = random(2,4);
+  randStarSize3 = random(2,4);
+  randStarSize4 = random(2,4);
+  randStarSize5 = random(2,4);
+  randStarSize6 = random(2,4);
+  randStarSize7 = random(2,4);
+  randStarSize8 = random(2,4);
+  randStarSize9 = random(2,4);
+  randStarSize0 = random(2,4);
 }
 void draw() {
+  int bright = 70;
+  int rBright = bright/10;
+  int bBright = bright/5;
+  int cBright = bright/18;
+  float vel = bright/50.0;
+  fill(0,20);
+  noStroke();
+  quad(0,0,0,1000,1000,1000,1000,0);
+
+  //Star Field
+  fill(255);
+  if (prog1*randVel1 >= 1000+randDelay1) {
+    prog1 = 0;
+    randX1 = random(1000);
+    randVel1 = random(0.6,1.4);
+    randDelay1 = random(200);
+    randStarSize1 = random(2,4);
+  }
+  ellipse(randX1, prog1*randVel1, randStarSize1, randStarSize1);
+  prog1+=vel;
+  
+  if (prog2*randVel2 >= 1000+randDelay2) {
+    prog2 = 0;
+    randX2 = random(1000);
+    randVel2 = random(0.6,1.4);
+    randDelay2 = random(200);
+    randStarSize2 = random(2,4);
+  }
+  ellipse(randX2, prog2*randVel2, randStarSize2, randStarSize2);
+  prog2+=vel;
+  
+  if (prog3*randVel3 >= 1000+randDelay3) {
+    prog3 = 0;
+    randX3 = random(1000);
+    randVel3 = random(0.6,1.4);
+    randDelay3 = random(200);
+    randStarSize3 = random(2,4);
+  }
+  ellipse(randX3, prog3*randVel3, randStarSize3, randStarSize3);
+  prog3+=vel;
+  
+  if (prog4*randVel4 >= 1000+randDelay4) {
+    prog4 = 0;
+    randX4 = random(1000);
+    randVel4 = random(0.6,1.4);
+    randDelay4 = random(200);
+    randStarSize4 = random(2,4);
+  }
+  ellipse(randX4, prog4*randVel4, randStarSize4, randStarSize4);
+  prog4+=vel;
+  
+  if (prog5*randVel5 >= 1000+randDelay5) {
+    prog5 = 0;
+    randX5 = random(1000);
+    randVel5 = random(0.6,1.4);
+    randDelay5 = random(200);
+    randStarSize5 = random(2,4);
+  }
+  ellipse(randX5, prog5*randVel5, randStarSize5, randStarSize5);
+  prog5+=vel;
+  
+  fill(255);
+  if (prog6*randVel6 >= 1000+randDelay6) {
+    prog6 = 0;
+    randX6 = random(1000);
+    randVel6 = random(0.6,1.4);
+    randDelay6 = random(200);
+    randStarSize6 = random(2,4);
+  }
+  ellipse(randX6, prog6*randVel6, randStarSize6, randStarSize6);
+  prog6+=vel;
+  
+  if (prog7*randVel7 >= 1000+randDelay7) {
+    prog7 = 0;
+    randX7 = random(1000);
+    randVel7 = random(0.6,1.4);
+    randDelay7 = random(200);
+    randStarSize7 = random(2,4);
+  }
+  ellipse(randX7, prog7*randVel7, randStarSize7, randStarSize7);
+  prog7+=vel;
+  
+  if (prog8*randVel8 >= 1000+randDelay8) {
+    prog8 = 0;
+    randX8 = random(1000);
+    randVel8 = random(0.6,1.4);
+    randDelay8 = random(200);
+    randStarSize8 = random(2,4);
+  }
+  ellipse(randX8, prog8*randVel8, randStarSize8, randStarSize8);
+  prog8+=vel;
+  
+  if (prog9*randVel9 >= 1000+randDelay9) {
+    prog9 = 0;
+    randX9 = random(1000);
+    randVel9 = random(0.6,1.4);
+    randDelay9 = random(200);
+    randStarSize9 = random(2,4);
+  }
+  ellipse(randX9, prog9*randVel9, randStarSize9, randStarSize9);
+  prog9+=vel;
+  
+  if (prog0*randVel0 >= 1000+randDelay0) {
+    prog0 = 0;
+    randX0 = random(1000);
+    randVel0 = random(0.6,1.4);
+    randDelay0 = random(200);
+    randStarSize0 = random(2,4);
+  }
+  ellipse(randX0, prog0*randVel0, randStarSize0, randStarSize0);
+  prog0+=vel;
+
   //Secondary Hull
   stroke(170);
   fill(180,180,180);
@@ -120,7 +348,6 @@ void draw() {
   line(500,325,500,423.5);
   line(575,250,672.5,250);
   line(425,250,327.5,250);
-  float diag = 87.5*sqrt(3);
   line(587.5,250+diag,500,250);
   line(587.5,250-diag,500,250);
   line(412.5,250+diag,500,250);
