@@ -123,7 +123,7 @@ void draw() {
   int rBright = bright/10;
   int bBright = bright/5;
   int cBright = bright/18;
-  float vel = bright/50.0;
+  float vel = bright/35.0;
   fill(0,20);
   noStroke();
   quad(0,0,0,1000,1000,1000,1000,0);
