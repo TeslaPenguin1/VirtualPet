@@ -253,6 +253,9 @@ void draw() {
   ellipse(495,630,5,5);
   
   //Left Nacelle
+  noStroke();
+  fill(0);
+  quad(375,518,375,692,375+bBright,692,375+bBright,518);
   stroke(170);
   fill(210,210,210);
   quad(480,500,480,530,370,650,370,575);
@@ -262,6 +265,8 @@ void draw() {
   stroke(170);
   fill(200,200,200);
   triangle(350,727,348,800,360,810);
+  quadGradient(375,520,375,690,375+bBright,690,375+bBright,520,b1,b2,2);
+  stroke(170);
   fill(220,220,220);
   quad(350,470,375,470,375,700,350,725);
   noStroke();
@@ -286,10 +291,14 @@ void draw() {
   ellipse(362.5,510,10,10);
   fill(#D1FDFF);
   ellipse(362.5,510,7,7);
+  arcGradient(362.5,510,7,7,10+cBright,10+cBright,0,2*PI,a1,a2);
   fill(#F26C6C);
   ellipse(362.5,820,4,4);
 
   //Right Nacelle
+  noStroke();
+  fill(0);
+  quad(625,518,625,692,625-bBright,692,625-bBright,518);
   strokeWeight(1);
   stroke(170);
   fill(210,210,210);
@@ -300,6 +309,8 @@ void draw() {
   stroke(170);
   fill(200,200,200);
   triangle(650,727,652,800,640,810);
+  quadGradient(625,520,625,690,625-bBright,690,625-bBright,520,b1,b2,4);
+  stroke(170);
   fill(220,220,220);
   quad(650,470,625,470,625,700,650,725);
   noStroke();
@@ -327,6 +338,7 @@ void draw() {
   ellipse(637.5,510,10,10);
   fill(#D1FDFF);
   ellipse(637.5,510,7,7);
+  arcGradient(637.5,510,7,7,10+cBright,10+cBright,0,2*PI,a1,a2);
   fill(#6DF07B);
   ellipse(637.5,820,4,4);
   
@@ -381,8 +393,13 @@ void draw() {
   noStroke();
   fill(#D1FDFF);
   ellipse(500,380,15,15);
+  arcGradient(500,380,15,15,35+bBright,35+bBright,0,2*PI,a1,a2);
   fill(#F26C6C);
   ellipse(330,250,4,4);
   fill(#6DF07B);
   ellipse(670,250,4,4);
+
+  //Impulse Engines
+  quadGradient(527,431,509,437,509,437+rBright,527,431+rBright,r1,r2,1);
+  quadGradient(473,431,491,437,491,437+rBright,473,431+rBright,r1,r2,1);
 }
